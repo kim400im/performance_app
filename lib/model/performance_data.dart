@@ -34,20 +34,6 @@ class PerformanceData {
       "performance_seat_info": row[16].toString(),
     })
         .toList();
-    //
-    // "performance_start_date": row[0].toString(),
-    // "performance_end_date": row[1].toString(),
-    // "performance_serial_number": row[2].toString(),
-    // "performance_genre": row[3].toString(),
-    // "performance_name": row[4].toString(),
-    // "performance_place": row[5].toString(),
-    // "performance_runningtime": row[6].toString(),
-    // "performance_intermission": row[7].toString(),
-    // "performance_age": row[8].toString(),
-    // "performance_synopsis": row[11].toString(),
-    // "performance_work_description": row[12].toString(),
-    // "performance_discount_info": row[15].toString(),
-    // "performance_seat_info": row[16].toString(),
 
     // 벡터 생성 (임베딩)
     for (var performance in _performances) {

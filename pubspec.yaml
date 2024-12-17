@@ -37,6 +37,9 @@ dependencies:
   rxdart: ^0.28.0
   http: ^1.2.2
   csv: ^6.0.0
+  flutter_native_splash: ^2.4.3
+  rename: ^3.0.2
+  flutter_launcher_icons: ^0.14.2
 
 dev_dependencies:
   flutter_test:
@@ -63,6 +66,8 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/performances.csv
+    - assets/images/dodge.jpg
+    - assets/images/user.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -90,3 +95,4 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+

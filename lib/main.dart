@@ -55,7 +55,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
   String apiKey = Secrets.openaiApiKey;
   String streamText = "";
 
-  static const String _kStrings = "Flutter ChatGPT";
+  static const String _kStrings = "공연 추천 GPT";
 
   String get _currentString => _kStrings;
 
@@ -428,7 +428,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                           ),
                           CircleAvatar(
                             radius: 8,
-                            backgroundColor: Colors.orange[200],
+                            backgroundColor: Colors.blue[200],
                           )
                         ],
                       );
@@ -453,7 +453,9 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                           const EdgeInsets.symmetric(vertical: 16),
                           child: Row(
                             children: [
-                              const CircleAvatar(),
+                              const CircleAvatar(
+                                backgroundImage: AssetImage('assets/images/user.png'),
+                              ),
                               const SizedBox(
                                 width: 8, // 원이랑 글자 사이의 거리
                               ),
@@ -463,7 +465,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                                   CrossAxisAlignment.start,
                                   //왼쪽으로 정렬
                                   children: [
-                                    const Text("User"),
+                                    const Text("나"),
                                     Text(_historyList[index].content),
                                   ],
                                 ),
@@ -476,7 +478,8 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           CircleAvatar(
-                            backgroundColor: Colors.teal,
+                            // backgroundColor: Colors.teal,
+                            backgroundImage: AssetImage('assets/images/dodge.jpg'),
                           ),
                           SizedBox(
                             width: 8,
@@ -486,7 +489,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                               crossAxisAlignment:
                               CrossAxisAlignment.start,
                               children: [
-                                Text("Chat GPT"),
+                                Text("공연 GPT"),
                                 Text(_historyList[index].content),
                               ],
                             ),
