@@ -33,15 +33,8 @@
 
 ![Suddy GPT 메인 화면](assets/images/main_func.png)
 
-> 위 이미지는 **`assets/images/screenshot.png`**에 저장된 예시 화면입니다.  
-> 실제 파일명과 경로를 맞게 설정해주세요.
 
 ---
 
-## **설치 및 실행 방법**
-
-### **1. 프로젝트 클론**
-터미널에서 다음 명령어를 실행합니다:
-```bash
-git clone <프로젝트 레포지토리 링크>
-cd <프로젝트 폴더>
+## **유튜브 시연 영상**
+- https://youtube.com/shorts/VQkp8Pzahqs
