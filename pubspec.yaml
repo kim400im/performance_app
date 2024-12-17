@@ -68,6 +68,7 @@ flutter:
     - assets/performances.csv
     - assets/images/dodge.jpg
     - assets/images/user.png
+    - assets/images/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
