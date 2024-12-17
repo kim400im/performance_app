@@ -321,48 +321,6 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
     );
   }
 
-  Future<void> _handleUserQuery(String userQuery) async {
-    if (userQuery.isEmpty) return;
-
-    setState(() {
-      _historyList.add(Messages(role: "user", content: userQuery));
-    });
-
-    // 공연 데이터 검색
-    List<Map<String, String>> searchResults = await _performancesData.search(userQuery);
-    String prompt = _gptService.generatePrompt(userQuery, searchResults);
-
-    // GPT 호출
-    try {
-      // final response = await requestChat(prompt);
-      final response = await _gptService.requestChat(prompt);
-      setState(() {
-        _historyList.add(Messages(role: "assistant", content: response));
-      });
-    } catch (e) {
-      setState(() {
-        _historyList.add(Messages(role: "assistant", content: "Error: $e"));
-      });
-    }
-  }
-
-  String _generatePrompt(String query, List<Map<String, String>> searchResults) {
-    if (searchResults.isEmpty) {
-      return "User asked: \"$query\"\nNo relevant performance found.";
-    }
-
-    StringBuffer prompt = StringBuffer();
-    prompt.writeln("You are a helpful assistant. Here is the performance information:");
-    for (var performance in searchResults) {
-      prompt.writeln("- Name: ${performance['performance_name']}, Genre: ${performance['performance_genre']}, Place: ${performance['performance_place']}, Synopsis: ${performance['performance_synopsis']}");
-    }
-
-    prompt.writeln("\nBased on the information, answer the following question:");
-    prompt.writeln(query);
-
-    return prompt.toString();
-  }
-
 
   @override
   Widget build(BuildContext context) {
